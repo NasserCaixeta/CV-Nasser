@@ -1,17 +1,25 @@
 "use client";
 
-import { Project } from "@/types";
+import { Locale } from "@/i18n/config";
+import { LocalizedProject } from "@/i18n/getDictionary";
 import { Badge } from "./Badge";
 import { Card } from "./Card";
 import { ExternalLink, Github, Folder } from "lucide-react";
 import Link from "next/link";
 
 interface ProjectCardProps {
-  project: Project;
+  project: LocalizedProject;
+  labels: {
+    featured: string;
+    githubAriaLabel: string;
+    demoAriaLabel: string;
+    details: string;
+  };
+  locale: Locale;
   featured?: boolean;
 }
 
-export function ProjectCard({ project, featured = false }: ProjectCardProps) {
+export function ProjectCard({ project, labels, locale, featured = false }: ProjectCardProps) {
   return (
     <Card
       className={featured ? "md:col-span-2 p-8" : "p-6"}
@@ -22,11 +30,11 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           <div className="flex items-center gap-3 mb-4">
             <Folder className="w-6 h-6 text-accent" />
             {featured && (
-              <Badge variant="accent">Destaque</Badge>
+              <Badge variant="accent">{labels.featured}</Badge>
             )}
           </div>
 
-          <Link href={`/projects/${project.slug}`}>
+          <Link href={`/${locale}/projects/${project.slug}`}>
             <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-3 hover:text-accent transition-colors">
               {project.title}
             </h3>
@@ -51,7 +59,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:text-accent transition-colors"
-                aria-label="Ver no GitHub"
+                aria-label={labels.githubAriaLabel}
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -62,16 +70,16 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:text-accent transition-colors"
-                aria-label="Ver demo"
+                aria-label={labels.demoAriaLabel}
               >
                 <ExternalLink className="w-5 h-5" />
               </a>
             )}
             <Link
-              href={`/projects/${project.slug}`}
+              href={`/${locale}/projects/${project.slug}`}
               className="text-sm text-accent hover:underline ml-auto"
             >
-              Ver detalhes →
+              {labels.details}
             </Link>
           </div>
         </div>

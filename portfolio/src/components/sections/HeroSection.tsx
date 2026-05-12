@@ -2,10 +2,16 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { personalInfo } from "@/data/personal";
+import { Dictionary } from "@/i18n/getDictionary";
 import { ChevronDown } from "lucide-react";
 
-export function HeroSection() {
+interface HeroSectionProps {
+  dictionary: Dictionary;
+}
+
+export function HeroSection({ dictionary }: HeroSectionProps) {
+  const { hero, personal } = dictionary;
+
   return (
     <section className="min-h-screen flex items-center justify-center relative pt-20">
       {/* Background Pattern */}
@@ -21,7 +27,7 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
             className="text-accent font-medium mb-4"
           >
-            Olá, eu sou
+            {hero.greeting}
           </motion.p>
 
           <motion.h1
@@ -30,7 +36,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-5xl md:text-7xl font-bold text-foreground mb-6"
           >
-            {personalInfo.name}
+            {personal.name}
           </motion.h1>
 
           <motion.p
@@ -39,7 +45,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted mb-8 leading-relaxed"
           >
-            {personalInfo.subtitle}
+            {personal.subtitle}
           </motion.p>
 
           <motion.div
@@ -50,12 +56,12 @@ export function HeroSection() {
           >
             <a href="#projects">
               <Button variant="primary" size="lg">
-                Ver Projetos
+                {hero.projectsButton}
               </Button>
             </a>
             <a href="#contact">
               <Button variant="outline" size="lg">
-                Fale Comigo
+                {hero.contactButton}
               </Button>
             </a>
           </motion.div>
@@ -86,14 +92,14 @@ export function HeroSection() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="hidden lg:flex fixed right-8 top-1/2 -translate-y-1/2 flex-col gap-4 text-sm"
       >
-        {["Sobre", "Stack", "Projetos"].map((label) => (
+        {hero.sideLinks.map((link) => (
           <a
-            key={label}
-            href={`#${label.toLowerCase()}`}
+            key={link.href}
+            href={link.href}
             className="text-muted hover:text-accent transition-colors writing-mode-vertical"
             style={{ writingMode: "vertical-rl" }}
           >
-            {label}
+            {link.label}
           </a>
         ))}
       </motion.div>

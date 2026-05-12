@@ -1,26 +1,27 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { personalInfo } from "@/data/personal";
+import { Dictionary } from "@/i18n/getDictionary";
 import { cn } from "@/lib/utils";
 
 interface SocialLinksProps {
+  personal: Dictionary["personal"];
   className?: string;
   iconSize?: number;
 }
 
-export function SocialLinks({ className, iconSize = 20 }: SocialLinksProps) {
+export function SocialLinks({ personal, className, iconSize = 20 }: SocialLinksProps) {
   const links = [
     {
-      href: personalInfo.github,
+      href: personal.github,
       icon: Github,
       label: "GitHub",
     },
     {
-      href: personalInfo.linkedin,
+      href: personal.linkedin,
       icon: Linkedin,
       label: "LinkedIn",
     },
     {
-      href: `mailto:${personalInfo.email}`,
+      href: `mailto:${personal.email}`,
       icon: Mail,
       label: "Email",
     },

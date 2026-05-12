@@ -1,22 +1,29 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { navLinks } from "@/data/navigation";
 import { Logo } from "@/components/shared/Logo";
+import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { Button } from "@/components/ui/Button";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
+import { Dictionary } from "@/i18n/getDictionary";
+import { Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { personalInfo } from "@/data/personal";
 
-export function Header() {
+interface HeaderProps {
+  dictionary: Dictionary;
+  locale: Locale;
+}
+
+export function Header({ dictionary, locale }: HeaderProps) {
   const { isScrolled } = useScrollPosition();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const { navigation, personal, header } = dictionary;
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navLinks.map((link) => link.href.replace("#", ""));
+      const sections = navigation.map((link) => link.href.replace("#", ""));
 
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
@@ -32,7 +39,7 @@ export function Header() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navigation]);
 
   return (
     <header
@@ -46,7 +53,7 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {navigation.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -62,10 +69,11 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
+        <div className="hidden md:flex items-center gap-4">
+          <LanguageSwitcher locale={locale} />
+          <a href={personal.linkedin} target="_blank" rel="noopener noreferrer">
             <Button variant="primary" size="sm">
-              Conecte-se
+              {header.connect}
             </Button>
           </a>
         </div>
@@ -74,7 +82,7 @@ export function Header() {
         <button
           className="md:hidden text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label={header.menuAriaLabel}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -84,7 +92,7 @@ export function Header() {
       {isMobileMenuOpen && (
         <div className="md:hidden glass mt-4 mx-6 rounded-lg p-6">
           <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {navigation.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -94,9 +102,10 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
+            <LanguageSwitcher locale={locale} className="pt-2" />
+            <a href={personal.linkedin} target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="sm" className="w-full mt-4">
-                Conecte-se
+                {header.connect}
               </Button>
             </a>
           </nav>

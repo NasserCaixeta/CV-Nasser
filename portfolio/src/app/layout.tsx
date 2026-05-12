@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${sora.variable} ${dmSans.variable}`}>
+    <html lang="pt-BR" className={`${sora.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );
