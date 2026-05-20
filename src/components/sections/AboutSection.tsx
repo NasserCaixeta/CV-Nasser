@@ -4,6 +4,7 @@ import { AnimatedElement } from "@/components/ui/AnimatedElement";
 import { Badge } from "@/components/ui/Badge";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Dictionary } from "@/i18n/getDictionary";
+import Image from "next/image";
 
 interface AboutSectionProps {
   dictionary: Dictionary;
@@ -42,7 +43,14 @@ export function AboutSection({ dictionary }: AboutSectionProps) {
             <div className="relative mx-auto w-64 h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 rounded-2xl bg-accent/20 blur-2xl" />
               <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-accent/50 bg-card flex items-center justify-center">
-                <span className="font-display text-6xl font-bold text-accent">NC</span>
+                <Image
+                  src="/images/Foto profissional minha.png"
+                  alt={personal.name}
+                  fill
+                  sizes="(min-width: 768px) 20rem, 16rem"
+                  className="object-cover object-top"
+                  priority
+                />
               </div>
             </div>
           </AnimatedElement>
