@@ -84,6 +84,15 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NasserCaixeta/ProjetoPadaria",
   },
   {
+    slug: "CamelBox Dashboard",
+    title: "CamelBox Dashboard",
+    description: "Dashboard feito para um sistema financeiro.",
+    longDescription:
+      "Dashboard feito utilizando REACT para o sistema financeiro camelbox",
+    technologies: ["REACT", "Node.JS", "JavaScript"],
+    githubUrl: "https://github.com/NasserCaixeta/pi4-frontend-CAMELBOX",
+  },
+  {
     slug: "fake-pinterest",
     title: "FakePinterest",
     description: "Clone do Pinterest com gerenciamento de coleções de imagens.",

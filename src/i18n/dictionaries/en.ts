@@ -176,6 +176,15 @@ export const en = {
       githubUrl: "https://github.com/NasserCaixeta/ProjetoPadaria",
     },
     {
+      slug: "camelbox-dashboard",
+      title: "CamelBox Dashboard",
+      description: "Dashboard built for a financial system.",
+      longDescription:
+        "Dashboard built with React for the CamelBox financial system.",
+      technologies: ["React", "Node.js", "JavaScript"],
+      githubUrl: "https://github.com/NasserCaixeta/pi4-frontend-CAMELBOX",
+    },
+    {
       slug: "fake-pinterest",
       title: "FakePinterest",
       description: "Pinterest clone with image collection management.",
