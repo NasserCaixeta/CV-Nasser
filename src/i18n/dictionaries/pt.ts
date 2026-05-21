@@ -177,13 +177,14 @@ export const pt = {
       githubUrl: "https://github.com/NasserCaixeta/ProjetoPadaria",
     },
     {
-      slug: "camelbox-dashboard",
-      title: "CamelBox Dashboard",
-      description: "Dashboard feito para um sistema financeiro.",
+      slug: "camelbox-financas",
+      title: "Camelbox Finanças",
+      description:
+        "API backend para um SaaS de análise financeira com extração inteligente de transações a partir de PDFs.",
       longDescription:
-        "Dashboard feito utilizando React para o sistema financeiro CamelBox.",
-      technologies: ["React", "Node.js", "JavaScript"],
-      githubUrl: "https://github.com/NasserCaixeta/pi4-frontend-CAMELBOX",
+        "Backend do Camelbox Finanças, um SaaS de análise financeira que processa extratos e faturas em PDF, extrai transações com auxílio do Google Gemini, categoriza despesas automaticamente e fornece dados para dashboards com receitas, despesas, saldo, comparativos por período e análise por categoria. A API inclui autenticação JWT, controle de uso gratuito, prevenção de uploads duplicados, persistência com SQLAlchemy e migrações com Alembic.",
+      technologies: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Google Gemini", "JWT"],
+      githubUrl: "https://github.com/NasserCaixeta/PI4-Backend",
     },
     {
       slug: "fake-pinterest",
