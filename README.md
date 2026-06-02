@@ -6,7 +6,7 @@ O projeto foi construído com foco em **performance**, **design moderno**, **res
 
 ## Visão geral
 
-Este é um site de portfólio pessoal desenvolvido com **Next.js**, **React**, **TypeScript** e **Tailwind CSS**.
+Este é um site de portfólio pessoal desenvolvido com **Next.js**, **React**, **TypeScript** e **Tailwind CSS**!
 
 A aplicação utiliza o **App Router** do Next.js e uma arquitetura baseada em componentes reutilizáveis, dados centralizados e tipagem forte.
 
