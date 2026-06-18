@@ -99,6 +99,26 @@ export const pt = {
   },
   projects: [
     {
+      slug: "calocount-backend",
+      title: "CaloCount",
+      description:
+        "API REST para controle de calorias com autenticação, registros alimentares, resumo diário e análise de refeições por imagem com IA.",
+      longDescription:
+        "Backend do CaloCount, uma API REST para controle de calorias desenvolvida com FastAPI, SQLAlchemy e Celery. O sistema inclui autenticação com JWT, cadastro e login de usuários, CRUD de registros alimentares, resumo diário de calorias e análise de fotos de refeições com Google Gemini. A arquitetura usa persistência relacional, migrações com Alembic e suporte a processamento assíncrono com Redis e Celery.",
+      technologies: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Celery", "Redis", "Google Gemini", "JWT"],
+      githubUrl: "https://github.com/NasserCaixeta/Calocount-Backend",
+    },
+    {
+      slug: "tutor-connect",
+      title: "TutorConnect",
+      description:
+        "Plataforma de conexão entre professores e alunos para aulas particulares.",
+      longDescription:
+        "Site desenvolvido para conectar professores a alunos, facilitando o acesso direto aos professores através de um catálogo e permitindo a comunicação entre ambos para agendar aulas diretamente na plataforma.",
+      technologies: ["React", "JavaScript", "Node.js", "MongoDB"],
+      githubUrl: "https://github.com/NasserCaixeta/PI2-REACT",
+    },
+    {
       slug: "cv-nasser",
       title: "Portfólio Pessoal",
       description:
@@ -108,7 +128,6 @@ export const pt = {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       githubUrl: "https://github.com/NasserCaixeta/CV-Nasser",
       liveUrl: "https://nassercaixeta.vercel.app",
-      featured: true,
     },
     {
       slug: "gois-ticket",
@@ -158,16 +177,6 @@ export const pt = {
       githubUrl: "https://github.com/NasserCaixeta/Crash-Recovery",
     },
     {
-      slug: "tutor-connect",
-      title: "TutorConnect",
-      description:
-        "Plataforma de conexão entre professores e alunos para aulas particulares.",
-      longDescription:
-        "Site desenvolvido para conectar professores a alunos, facilitando o acesso direto aos professores através de um catálogo e permitindo a comunicação entre ambos para agendar aulas diretamente na plataforma.",
-      technologies: ["React", "JavaScript", "Node.js", "MongoDB"],
-      githubUrl: "https://github.com/NasserCaixeta/PI2-REACT",
-    },
-    {
       slug: "padaria-costao",
       title: "Site Padaria Costão",
       description: "Website institucional desenvolvido como freelancer.",
@@ -185,6 +194,7 @@ export const pt = {
         "Backend do Camelbox Finanças, um SaaS de análise financeira que processa extratos e faturas em PDF, extrai transações com auxílio do Google Gemini, categoriza despesas automaticamente e fornece dados para dashboards com receitas, despesas, saldo, comparativos por período e análise por categoria. A API inclui autenticação JWT, controle de uso gratuito, prevenção de uploads duplicados, persistência com SQLAlchemy e migrações com Alembic.",
       technologies: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Google Gemini", "JWT"],
       githubUrl: "https://github.com/NasserCaixeta/PI4-Backend",
+      featured: true,
     },
     {
       slug: "fake-pinterest",
