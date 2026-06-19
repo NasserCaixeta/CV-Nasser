@@ -18,6 +18,15 @@ export const metadata: Metadata = {
   title: "Nasser Caixeta | Software Engineer",
   description:
     "Desenvolvedor Full Stack especializado em automação, proteção de dados e soluções web escaláveis. Python, Node.js, React, TypeScript.",
+  icons: {
+    icon: [
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: "/icon.svg",
+  },
   keywords: [
     "Desenvolvedor Full Stack",
     "Software Engineer",
