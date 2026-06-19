@@ -39,14 +39,19 @@ export function HeroSection({ dictionary }: HeroSectionProps) {
             {personal.name}
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted mb-8 leading-relaxed"
+            className="mb-8 space-y-3"
           >
-            {personal.subtitle}
-          </motion.p>
+            <p className="text-xl md:text-2xl text-muted leading-relaxed">
+              {personal.subtitle}
+            </p>
+            <p className="text-base md:text-lg text-muted/90 leading-relaxed">
+              {personal.secondarySubtitle}
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

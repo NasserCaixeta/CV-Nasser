@@ -2,7 +2,7 @@ export const pt = {
   metadata: {
     title: "Nasser Caixeta | Software Engineer",
     description:
-      "Desenvolvedor Full Stack com forte viés em Inteligência Artificial e Engenharia de Dados. Python, Node.js, React, TypeScript.",
+      "Desenvolvedor Full Stack focado em React, Node.js, TypeScript, PostgreSQL e APIs REST.",
     keywords: [
       "Desenvolvedor Full Stack",
       "Software Engineer",
@@ -26,21 +26,23 @@ export const pt = {
     name: "Nasser Caixeta",
     title: "Software Engineer",
     subtitle:
-      "Desenvolvedor Full Stack com forte viés em Inteligência Artificial e Engenharia de Dados.",
+      "Desenvolvedor Full Stack focado em React, Node.js, TypeScript, PostgreSQL e APIs REST.",
+    secondarySubtitle:
+      "Crio aplicações web, sistemas internos, dashboards, automações e integrações com IA aplicada.",
     bio: [
-      "Sou um desenvolvedor de software em formação pela Ciência da Computação com experiência prática em automação de processos, engenharia de dados e inteligência artificial. Tenho um histórico de entrega de resultados mensuráveis, incluindo a redução de até 73% no tempo de execução de projetos através da criação de agentes e padronização técnica.",
-      "Participei do desenvolvimento de bots técnicos utilizando Python e LLMs que reduziram o tempo de resolução de tickets em 66%, além de automatizar pipelines de dados e criar dashboards para suporte à decisão. Atuo com foco em arquitetura de microserviços, APIs REST e fluxos assíncronos, garantindo soluções escaláveis e redução no volume de bugs.",
-      "Meu objetivo é continuar evoluindo como desenvolvedor full stack, contribuindo com times inovadores através de mentoria técnica e documentação estruturada. Busco aprofundar constantemente meus conhecimentos em arquitetura de software, engenharia de prompts e soluções web modernas para entregar alta performance e qualidade.",
+      "Sou Desenvolvedor Full Stack e estudante de Ciência da Computação, com foco em React, Node.js, TypeScript, PostgreSQL, Next.js e APIs REST.",
+      "Tenho experiência no desenvolvimento de aplicações web, sistemas internos, dashboards, automações e integrações voltadas para reduzir tarefas manuais e organizar processos. Meus projetos incluem sistemas de tickets, gestão de ativos de TI, controle de calorias, APIs financeiras e soluções com IA aplicada.",
+      "Minha base em TI, dados e automação me ajuda a construir soluções práticas, conectando frontend, backend, banco de dados e integrações para resolver problemas reais.",
     ],
     email: "nassercaixeta.profissional@gmail.com",
     location: "Brasília, Distrito Federal, Brasil",
     linkedin: "https://www.linkedin.com/in/nasser-caixeta",
     github: "https://github.com/NasserCaixeta",
     highlights: [
-      "Sempre aprendendo",
-      "Foco em Desenvolvimento",
-      "Soluções escaláveis",
-      "Proatividade",
+      "React e Node.js",
+      "APIs REST",
+      "PostgreSQL e dados",
+      "Automação e IA aplicada",
     ],
   },
   hero: {
@@ -58,7 +60,8 @@ export const pt = {
   },
   stack: {
     title: "Minha Stack",
-    subtitle: "Ferramentas que domino e utilizo diariamente.",
+    subtitle:
+      "Tecnologias que uso para construir APIs, interfaces web, automações e soluções com dados.",
     categories: [
       { key: "frontend", title: "Frontend" },
       { key: "backend", title: "Backend" },
@@ -67,12 +70,14 @@ export const pt = {
   },
   projectsSection: {
     title: "Projetos",
+    featuredTitle: "Projetos em destaque",
+    otherTitle: "Outros projetos",
     githubCta: "Explorar mais no GitHub",
   },
   contact: {
     title: "Vamos trabalhar juntos?",
     subtitle:
-      "Estou sempre aberto a novos desafios e parcerias. Se você tem um projeto em mente ou apenas quer trocar uma ideia, entre em contato.",
+      "Estou aberto a oportunidades como Desenvolvedor Full Stack, principalmente em projetos com React, Node.js, TypeScript, APIs, dashboards, automação e IA aplicada.",
     connect: "Conecte-se comigo",
   },
   header: {
@@ -102,11 +107,64 @@ export const pt = {
       slug: "calocount-backend",
       title: "CaloCount",
       description:
-        "API REST para controle de calorias com autenticação, registros alimentares, resumo diário e análise de refeições por imagem com IA.",
+        "Aplicação full stack para controle de calorias, registro de refeições e análise de alimentos por imagem com IA.",
       longDescription:
-        "Backend do CaloCount, uma API REST para controle de calorias desenvolvida com FastAPI, SQLAlchemy e Celery. O sistema inclui autenticação com JWT, cadastro e login de usuários, CRUD de registros alimentares, resumo diário de calorias e análise de fotos de refeições com Google Gemini. A arquitetura usa persistência relacional, migrações com Alembic e suporte a processamento assíncrono com Redis e Celery.",
-      technologies: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Celery", "Redis", "Google Gemini", "JWT"],
+        "Aplicação full stack para controle de calorias com registro de refeições, acompanhamento diário e análise de alimentos por imagem com IA. O projeto combina frontend, API REST, autenticação, banco de dados relacional e integrações para transformar registros alimentares em informações úteis para o usuário.",
+      technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "FastAPI", "Google Gemini"],
       githubUrl: "https://github.com/NasserCaixeta/Calocount-Backend",
+      featured: true,
+    },
+    {
+      slug: "camelbox-financas",
+      title: "Camelbox Finanças",
+      description:
+        "API backend para SaaS financeiro com autenticação, banco de dados, processamento de PDFs e extração de transações com IA.",
+      longDescription:
+        "API backend para um SaaS financeiro que processa extratos e faturas em PDF, extrai transações com IA, categoriza despesas e fornece dados estruturados para dashboards. A solução inclui autenticação JWT, persistência com SQLAlchemy, migrações com Alembic, prevenção de duplicidade e integração com Google Gemini.",
+      technologies: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Google Gemini", "JWT"],
+      githubUrl: "https://github.com/NasserCaixeta/PI4-Backend",
+      featured: true,
+    },
+    {
+      slug: "gois-ticket",
+      title: "Góis-Ticket",
+      description:
+        "Sistema full stack de chamados para equipes de TI, com acompanhamento de tickets e dashboard.",
+      longDescription:
+        "Sistema full stack de chamados para equipes de TI acompanharem solicitações, status e resolução de tickets. O projeto inclui interface web, backend, persistência em banco de dados e dashboard para dar mais visibilidade ao fluxo de atendimento.",
+      technologies: ["React", "Node.js", "JavaScript", "MongoDB"],
+      githubUrl: "https://github.com/NasserCaixeta/PI3-FrontEnd",
+      featured: true,
+    },
+    {
+      slug: "forte-asset-manager",
+      title: "Gerenciador de Ativos Forte",
+      description:
+        "Sistema full stack para gestão de ativos de TI, funcionários e alocação de equipamentos.",
+      longDescription:
+        "Sistema full stack para o departamento de TI controlar notebooks, monitores e outros ativos, associando equipamentos a funcionários e identificando itens disponíveis. O projeto usa frontend em React, backend em Node.js, TypeScript e PostgreSQL para organizar processos internos e reduzir controle manual.",
+      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+      githubUrl:
+        "https://github.com/NasserCaixeta/desafio-full-stack-forte-tecnologias",
+    },
+    {
+      slug: "crash-recovery",
+      title: "Sistema de Recuperação de Falhas",
+      description: "Sistema distribuído com monitoramento e tolerância a falhas.",
+      longDescription:
+        "Monitor central que recebe heartbeats de workers, detecta automaticamente falhas e redistribui tarefas para workers ativos. Simula cenários reais de microserviços com balanceamento dinâmico e computação em nuvem com tolerância a falhas.",
+      technologies: ["JavaScript", "Node.js", "WebSockets", "Docker"],
+      githubUrl: "https://github.com/NasserCaixeta/Crash-Recovery",
+    },
+    {
+      slug: "org-scraper",
+      title: "OrgScraper",
+      description:
+        "Ferramenta de web scraping para análise de empresas voltada para equipes de vendas.",
+      longDescription:
+        "Aplicação que realiza web scraping de sites de empresas e retorna uma análise completa sobre o que a empresa faz, seus serviços e informações relevantes para equipes de vendas prospectar clientes.",
+      technologies: ["Python", "BeautifulSoup", "Flask", "React"],
+      githubUrl: "https://github.com/NasserCaixeta/desafiobna",
     },
     {
       slug: "tutor-connect",
@@ -117,6 +175,15 @@ export const pt = {
         "Site desenvolvido para conectar professores a alunos, facilitando o acesso direto aos professores através de um catálogo e permitindo a comunicação entre ambos para agendar aulas diretamente na plataforma.",
       technologies: ["React", "JavaScript", "Node.js", "MongoDB"],
       githubUrl: "https://github.com/NasserCaixeta/PI2-REACT",
+    },
+    {
+      slug: "data-analysis-project",
+      title: "Análise de Vagas de Pesquisa",
+      description: "Projeto de análise de dados de vagas de pesquisas nacionais.",
+      longDescription:
+        "Análise completa de vagas de pesquisas nacionais baseada em diferentes métricas como idade, número de candidatos, gênero e outras variáveis demográficas. Visualizações interativas e insights estatísticos.",
+      technologies: ["Python", "Pandas", "Jupyter Notebook", "Matplotlib"],
+      githubUrl: "https://github.com/NasserCaixeta/Data-Analysis-Project",
     },
     {
       slug: "cv-nasser",
@@ -130,53 +197,6 @@ export const pt = {
       liveUrl: "https://nassercaixeta.vercel.app",
     },
     {
-      slug: "gois-ticket",
-      title: "Góis-Ticket",
-      description: "Sistema de tickets completo para equipes de TI corporativas.",
-      longDescription:
-        "Sistema de gerenciamento de tickets desenvolvido para empresas que necessitam de uma equipe de TI organizada. Permite criação, acompanhamento e resolução de chamados técnicos com dashboard completo.",
-      technologies: ["JavaScript", "React", "Node.js", "MongoDB"],
-      githubUrl: "https://github.com/NasserCaixeta/PI3-FrontEnd",
-    },
-    {
-      slug: "org-scraper",
-      title: "OrgScraper",
-      description:
-        "Ferramenta de web scraping para análise de empresas voltada para equipes de vendas.",
-      longDescription:
-        "Aplicação que realiza web scraping de sites de empresas e retorna uma análise completa sobre o que a empresa faz, seus serviços e informações relevantes para equipes de vendas prospectar clientes.",
-      technologies: ["Python", "BeautifulSoup", "Flask", "React"],
-      githubUrl: "https://github.com/NasserCaixeta/desafiobna",
-    },
-    {
-      slug: "forte-asset-manager",
-      title: "Gerenciador de Ativos Forte",
-      description: "Sistema interno de gestão de ativos de TI para a Forte Tecnologias.",
-      longDescription:
-        "Sistema que permite ao departamento de TI gerenciar os ativos da empresa (notebooks, monitores) e associá-los aos funcionários. Resolve o problema de saber qual funcionário está com qual equipamento e quais estão disponíveis.",
-      technologies: ["TypeScript", "React", "Node.js", "PostgreSQL"],
-      githubUrl:
-        "https://github.com/NasserCaixeta/desafio-full-stack-forte-tecnologias",
-    },
-    {
-      slug: "data-analysis-project",
-      title: "Análise de Vagas de Pesquisa",
-      description: "Projeto de análise de dados de vagas de pesquisas nacionais.",
-      longDescription:
-        "Análise completa de vagas de pesquisas nacionais baseada em diferentes métricas como idade, número de candidatos, gênero e outras variáveis demográficas. Visualizações interativas e insights estatísticos.",
-      technologies: ["Python", "Pandas", "Jupyter Notebook", "Matplotlib"],
-      githubUrl: "https://github.com/NasserCaixeta/Data-Analysis-Project",
-    },
-    {
-      slug: "crash-recovery",
-      title: "Sistema de Recuperação de Falhas",
-      description: "Sistema distribuído com monitoramento e tolerância a falhas.",
-      longDescription:
-        "Monitor central que recebe heartbeats de workers, detecta automaticamente falhas e redistribui tarefas para workers ativos. Simula cenários reais de microserviços com balanceamento dinâmico e computação em nuvem com tolerância a falhas.",
-      technologies: ["JavaScript", "Node.js", "WebSockets", "Docker"],
-      githubUrl: "https://github.com/NasserCaixeta/Crash-Recovery",
-    },
-    {
       slug: "padaria-costao",
       title: "Site Padaria Costão",
       description: "Website institucional desenvolvido como freelancer.",
@@ -184,17 +204,6 @@ export const pt = {
         "Site institucional completo desenvolvido para uma padaria parceira. Projeto freelancer com foco em apresentação dos produtos, localização e informações de contato.",
       technologies: ["HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/NasserCaixeta/ProjetoPadaria",
-    },
-    {
-      slug: "camelbox-financas",
-      title: "Camelbox Finanças",
-      description:
-        "API backend para um SaaS de análise financeira com extração inteligente de transações a partir de PDFs.",
-      longDescription:
-        "Backend do Camelbox Finanças, um SaaS de análise financeira que processa extratos e faturas em PDF, extrai transações com auxílio do Google Gemini, categoriza despesas automaticamente e fornece dados para dashboards com receitas, despesas, saldo, comparativos por período e análise por categoria. A API inclui autenticação JWT, controle de uso gratuito, prevenção de uploads duplicados, persistência com SQLAlchemy e migrações com Alembic.",
-      technologies: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Google Gemini", "JWT"],
-      githubUrl: "https://github.com/NasserCaixeta/PI4-Backend",
-      featured: true,
     },
     {
       slug: "fake-pinterest",

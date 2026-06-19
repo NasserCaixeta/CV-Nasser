@@ -26,6 +26,7 @@ export type Dictionary = {
     name: string;
     title: string;
     subtitle: string;
+    secondarySubtitle: string;
     bio: readonly string[];
     email: string;
     location: string;
@@ -45,7 +46,12 @@ export type Dictionary = {
     subtitle: string;
     categories: readonly { key: "frontend" | "backend" | "tools"; title: string }[];
   };
-  projectsSection: { title: string; githubCta: string };
+  projectsSection: {
+    title: string;
+    featuredTitle: string;
+    otherTitle: string;
+    githubCta: string;
+  };
   contact: { title: string; subtitle: string; connect: string };
   header: { connect: string; menuAriaLabel: string };
   footer: { separator: string };
@@ -82,8 +88,8 @@ export function getProjectBySlug(locale: Locale, slug: string) {
   return getDictionary(locale).projects.find((project) => project.slug === slug);
 }
 
-export function getFeaturedProject(locale: Locale) {
-  return getDictionary(locale).projects.find((project) => project.featured);
+export function getFeaturedProjects(locale: Locale) {
+  return getDictionary(locale).projects.filter((project) => project.featured);
 }
 
 export function getOtherProjects(locale: Locale) {

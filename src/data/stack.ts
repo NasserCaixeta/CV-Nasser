@@ -11,11 +11,14 @@ export const technologies: Technology[] = [
   { name: "Tailwind CSS", icon: "tailwindcss", category: "frontend" },
 
   // Backend
-  { name: "Python", icon: "python", category: "backend" },
   { name: "Node.js", icon: "nodejs", category: "backend" },
+  { name: "Python", icon: "python", category: "backend" },
+  { name: "FastAPI", icon: "fastapi", category: "backend" },
   { name: "Flask", icon: "flask", category: "backend" },
+  { name: "PostgreSQL", icon: "postgresql", category: "backend" },
   { name: "SQL", icon: "postgresql", category: "backend" },
   { name: "MongoDB", icon: "mongodb", category: "backend" },
+  { name: "Redis", icon: "redis", category: "backend" },
 
   // Tools
   { name: "Git", icon: "git", category: "tools" },

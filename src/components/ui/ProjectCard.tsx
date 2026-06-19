@@ -22,7 +22,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project, labels, locale, featured = false }: ProjectCardProps) {
   return (
     <Card
-      className={featured ? "md:col-span-2 p-8" : "p-6"}
+      className={featured ? "p-7" : "p-6"}
       hover
     >
       <div className={featured ? "flex flex-col md:flex-row gap-6" : ""}>
