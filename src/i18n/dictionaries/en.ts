@@ -2,7 +2,7 @@ export const en = {
   metadata: {
     title: "Nasser Caixeta | Software Engineer",
     description:
-      "Full Stack Developer focused on React, Node.js, TypeScript, PostgreSQL, and REST APIs.",
+      "Full Stack Developer focused on React, Python, Node.js, TypeScript, PostgreSQL, and REST APIs.",
     keywords: [
       "Full Stack Developer",
       "Software Engineer",
@@ -26,11 +26,11 @@ export const en = {
     name: "Nasser Caixeta",
     title: "Software Engineer",
     subtitle:
-      "Full Stack Developer focused on React, Node.js, TypeScript, PostgreSQL, and REST APIs.",
+      "Full Stack Developer focused on React, Python, Node.js, TypeScript, PostgreSQL, and REST APIs.",
     secondarySubtitle:
       "I build web applications, internal systems, dashboards, automations, and AI-powered integrations.",
     bio: [
-      "I am a Full Stack Developer and Computer Science student focused on React, Node.js, TypeScript, PostgreSQL, Next.js, and REST APIs.",
+      "I am a Full Stack Developer and Computer Science student focused on React, Python, Node.js, TypeScript, PostgreSQL, Next.js, and REST APIs.",
       "I have experience building web applications, internal systems, dashboards, automations, and integrations designed to reduce manual work and organize processes. My projects include ticketing systems, IT asset management, calorie tracking, financial APIs, and applied AI solutions.",
       "My background in IT, data, and automation helps me build practical solutions that connect frontend, backend, databases, and integrations to solve real problems.",
     ],
